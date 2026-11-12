@@ -1,0 +1,50 @@
+<!-- Buy me a Transistor: arancione animato (fulmine, occhiolino, riflesso) - pulsante per README GitHub -->
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="84" viewBox="0 0 390 84">
+  <defs>
+    <!-- Sfumatura verticale del fondo -->
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff9a4d"/><stop offset="1" stop-color="#e8590c"/>
+    </linearGradient>
+    <!-- Ritaglio per tenere le decorazioni dentro il pulsante -->
+    <clipPath id="btn"><rect x="3" y="3" width="384" height="72" rx="36"/></clipPath>
+  </defs>
+  <!-- Ombra sotto il pulsante (effetto 3D) -->
+  <rect x="3" y="9" width="384" height="72" rx="36" fill="#9c3a06"/>
+  <!-- Corpo del pulsante -->
+  <rect x="3" y="3" width="384" height="72" rx="36" fill="url(#bg)"/>
+  <!-- Contorno -->
+  <rect x="4.5" y="4.5" width="381" height="69" rx="34.5" fill="none" stroke="#ffe0c2" stroke-width="3"/>
+  <!-- Piste decorative con via -->
+  <g clip-path="url(#btn)" stroke="#ffffff" stroke-opacity="0.3" stroke-width="2" fill="none">
+    <path d="M250 3 V14 L262 26 H390"/><circle cx="250" cy="14" r="3.5"/>
+    <path d="M310 75 V64 L322 52 H390"/><circle cx="310" cy="64" r="3.5"/>
+    <path d="M0 60 H40 L52 72 V80"/>
+  </g>
+  <!-- Icona transistor TO-92 sorridente -->
+  <g transform="translate(34,14)">
+    <!-- Tre piedini: E, B, C -->
+    <rect x="7" y="30" width="4" height="20" rx="1" fill="#ffffff"/>
+    <rect x="17" y="30" width="4" height="22" rx="1" fill="#ffffff"/>
+    <rect x="27" y="30" width="4" height="20" rx="1" fill="#ffffff"/>
+    <!-- Corpo: sopra arrotondato, base piatta -->
+    <path d="M2 32 V16 A17 16 0 0 1 36 16 V32 Z" fill="#1b1b1b" stroke="#ffffff" stroke-width="2"/>
+    <!-- Occhio sinistro -->
+    <circle cx="13" cy="17" r="2.6" fill="#ffffff"/>
+    <!-- Occhio destro (ellisse, cosi' puo' fare l'occhiolino nella versione animata) -->
+    <ellipse cx="25" cy="17" rx="2.6" ry="2.6" fill="#ffffff"><animate attributeName="ry" values="2.6;2.6;0.4;2.6;2.6" keyTimes="0;0.80;0.87;0.94;1" dur="3s" repeatCount="indefinite"/></ellipse>
+    <!-- Sorriso -->
+    <path d="M12 23 Q19 29 26 23" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Fulmine -->
+    <path d="M42 4 L36 15 H41 L37 25 L47 12 H42 L46 4 Z" fill="#fff3b0"><animate attributeName="opacity" values="1;0.15;1;1" keyTimes="0;0.15;0.3;1" dur="1.4s" repeatCount="indefinite"/></path>
+  </g>
+  <!-- Ombra del testo -->
+  <text x="96" y="50" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="28" font-weight="800" fill="#7a2c00" fill-opacity="0.45">Buy me a Transistor</text>
+  <!-- Testo principale -->
+  <text x="94" y="48" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="28" font-weight="800" fill="#ffffff">Buy me a Transistor</text>
+  <!-- Riflesso di luce che attraversa il pulsante da sinistra a destra -->
+  <g clip-path="url(#btn)">
+    <rect x="-80" y="0" width="50" height="84" fill="#ffffff" fill-opacity="0.28" transform="skewX(-20)">
+      <animate attributeName="x" values="-80;520;520" keyTimes="0;0.35;1" dur="3s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>
